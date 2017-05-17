@@ -18,7 +18,7 @@ function draw () {
     // 丸の数の乱数を取得
     let roundMin = 8
     let roundMax = 20
-    const roundNum = Math.floor( Math.random() * roundMax + 1 - roundMin ) + roundMin
+    const roundNum = Math.floor(Math.random() * roundMax + 1 - roundMin) + roundMin
     for (let i = 0; i < roundNum; i++) {
       drowRound(ctx, canvasWidth, canvasHeight)
     }
@@ -34,17 +34,14 @@ function drowRound (ctx, canvasWidth, canvasHeight) {
   ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')'
 
   // 丸の数の乱数を取得
-  const roundMin = 5
-  const roundMax = 20
-  const roundNum = Math.floor( Math.random() * roundMax + 1 - roundMin ) + roundMin
   const roundX = Math.random() * canvasWidth
   const roundY = Math.random() * canvasHeight
   const radiusMin = 10
   const radiusMax = 100
-  const radiusNum = Math.floor( Math.random() * radiusMax + 1 - radiusMin ) + radiusMin
+  const radiusNum = Math.floor(Math.random() * radiusMax + 1 - radiusMin) + radiusMin
 
   ctx.beginPath()
-  ctx.arc(roundX, roundY, radiusNum, 0, Math.PI*2.0,true)
+  ctx.arc(roundX, roundY, radiusNum, 0, Math.PI * 2.0, true)
   ctx.fill()
 }
 
